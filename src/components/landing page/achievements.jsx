@@ -11,8 +11,8 @@ const achievements = () => {
         const achieves = document.querySelector("#achievements .someAchieve .mainContent .achieves")
         windowWidth >= 730 ?
             achieves ? achieves.style.setProperty("--childWidth", `${(window.innerWidth - 150) * 0.5}px`) : '' : ''
-        730>windowWidth && windowWidth >= 350 ?
-            achieves ? (()=>{
+        730 > windowWidth && windowWidth >= 350 ?
+            achieves ? (() => {
                 achieves.style.setProperty("--childWidth", `${(window.innerWidth - 100)}px`)
             })() : '' : ''
     }
@@ -56,8 +56,8 @@ const achievements = () => {
                     </div>
 
                     {/* main content of acheievements  */}
-                    <div className="mainContent w-100">
-                        <div className="heading pt-4 font-[800]">achievements</div>
+                    <div className="mainContent mt-10 w-100">
+                        <div className="heading  font-[800]">achievements</div>
                         <div className="achieves my-8">
                             {[1, 2, 3, 4].map((_, index) => {
                                 return <div className="achieve position-relative my-3 mx-1">
@@ -68,8 +68,12 @@ const achievements = () => {
                                         <p className=' text-2xl font-[700]'>Demo Achievement</p>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim aperiam ab, eos deleniti minus officiis fuga doloremque ullam iure nihil</p>
                                     </div>
+
                                 </div>
                             })}
+                        </div>
+                        <div className="exploreAchievements flex justify-center ">
+                            <button className='checkOut border-none outline-none py-2 px-3 text-xl rounded-lg mx-auto bg-indigo-600 fw-semibold text-white hover:bg-indigo-900 transition-all duration-400'>Check Out</button>
                         </div>
                     </div>
                 </div>
